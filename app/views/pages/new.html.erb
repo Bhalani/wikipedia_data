@@ -1,0 +1,7 @@
+<h2>Add page </h2>
+
+<%= form_for @page do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.submit :add %>
+<% end %>

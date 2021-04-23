@@ -1,0 +1,17 @@
+<h1>Test task</h1>
+<%= link_to 'Add page', new_page_path %>
+<div class="row border">
+  <div class="col-md-5">
+    <% @pages.each do |page| %>
+      <div class="row">
+        <button class="wiki-content">
+          <div class="col-12 wiki-name" data-meta-content="<%= page.metadata.to_json %>">
+            <%= page.name %>
+          </div>
+        </button>
+      </div>
+    <% end %>
+  </div>
+  <div class="col-md-7 border" id="meta-content">
+  </div>
+</div>
